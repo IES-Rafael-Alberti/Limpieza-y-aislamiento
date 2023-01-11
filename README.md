@@ -4,7 +4,7 @@
 
 Empezaremos realizando una actualización del Sistema Linux.
 
-![Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image1.png](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image1.png)
+![Proyecto%203%20Limpieza%20y%20aislamiento/image1.png](Proyecto%203%20Limpieza%20y%20aislamiento/image1.png)
 
 Aleatorización del diseño del espacio de direcciones del kernel (KASLR)
 
@@ -16,7 +16,7 @@ Editando el archivo /proc/sys/kernel/randomize_va_spacecon y añadiéndole el va
 - LIBS/MMAP ASLR: cada ejecución de un programa da como resultado un mmapdiseño de espacio de memoria diferente
 - EXEC ASLR: cada programa que se cumplió -fPIE -pie, que significa Position Independent Executables, se cargará en diferentes ubicaciones de memoria
 
-![Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image2.png](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image2.png)
+![Proyecto%203%20Limpieza%20y%20aislamiento/image2.png](Proyecto%203%20Limpieza%20y%20aislamiento/image2.png)
 
 ### Hardening de servicios
 
@@ -31,17 +31,17 @@ Editando el archivo /proc/sys/kernel/randomize_va_spacecon y añadiéndole el va
 > sysctl fs.protected_fifos = 1
 ```
 
-![Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image3.png](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image3.png)
+![Proyecto%203%20Limpieza%20y%20aislamiento/image3.png](Proyecto%203%20Limpieza%20y%20aislamiento/image3.png)
 
 ### Deshabilitar IPv6 utilizando Sysctl
 
-![Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image4.png](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image4.png)
+![Proyecto%203%20Limpieza%20y%20aislamiento/image4.png](Proyecto%203%20Limpieza%20y%20aislamiento/image4.png)
 
 ## Controlar el acceso de root
 
 modificamos el fichero /etc/securetty para controlar las tty desde donde root puede conectarse:
 
-![Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image5.png](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image5.png)
+![Proyecto%203%20Limpieza%20y%20aislamiento/image5.png](Proyecto%203%20Limpieza%20y%20aislamiento/image5.png)
 
 ## Configuraciones SSH
 
@@ -57,7 +57,7 @@ Entramos al archivo /etc/ssh/sshd_config y añadimos lo siguiente
 
 ## Instalación app armor
 
-![Untitled](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/Untitled.png)
+![Untitled](Proyecto%203%20Limpieza%20y%20aislamiento/Untitled.png)
 
 Podemos comprobar si esta instalado con el siguiente comando:
 
@@ -65,7 +65,7 @@ Podemos comprobar si esta instalado con el siguiente comando:
 aa-status
 ```
 
-![Untitled](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/Untitled%201.png)
+![Untitled](Proyecto%203%20Limpieza%20y%20aislamiento/Untitled%201.png)
 
 ## Windows
 
@@ -77,13 +77,13 @@ iwr -useb [https://christitus.com/win](https://christitus.com/win) | iex
 
 Una vez ejecutada nos aparecera la siguiente ventana en la que podremos empezar a trabajar:
 
-![Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image6.png](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/image6.png)
+![Proyecto%203%20Limpieza%20y%20aislamiento/image6.png](Proyecto%203%20Limpieza%20y%20aislamiento/image6.png)
 
 Con esta primera implementación estaremos deshabilitando muchos servicios y funciones que se ejecutan en segundo plano y ralentizan nuestro sistema.
 
 Tras esto accedemos a la sección de actualizaciones y las configuramos para que se realicen solo las de seguridad para reducir las posibilidades de tener una actualización que traiga incompatibilidades.
 
-![Untitled](Proyecto%203%20Limpieza%20y%20aislamiento%20b130eaa264f14bbf917862d0d3687970/Untitled%202.png)
+![Untitled](Proyecto%203%20Limpieza%20y%20aislamiento/Untitled%202.png)
 
 Programas, protocolos y servicios que sobran en la imagen de Windows 10 proporcionada en PNetLab:
 

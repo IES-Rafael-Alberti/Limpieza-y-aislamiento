@@ -104,3 +104,20 @@ Como lo que queremos es darle un uso de navegación web y ofimática básica a l
 En cuanto a los servicios, podríamos prescindir de los siguientes:
 
 [Untitled](https://www.notion.so/a9fb306de94c4a4fa1fc6ee5e7cbab44)
+
+|Nombre|Nombre en Adm Tareas|Descripción|Configuración|
+|:----|:----|:----|:----|
+|Administrador de mapas descargados|MapsBroker| Al no utilizar la aplicación Mapas de Windows en la máquina Windows, lo podemos desactivar. |
+|Fax|Fax|No suele ser necesario para usuarios domésticos. |
+|Servicio biométrico de Windows|WbioSrvc|Al no tener hardware de huellas dactilares o reconocimiento facial en la máquina Windows, lo podemos desactivar. |
+|Servicio de seguimiento de diagnósticos|Diagsvc|Como no nos interesa mandar información de telemetría a Microsoft, lo podemos desactivar. |
+|Servicio de panel de escritura a mano y teclado táctil|TabletInputService|Como el usuario no va a utilizar hardware compatible (por ejemplo, una tarjeta gráfica) en la máquina Windows, lo podemos desactivar. |
+|Servicio asistente para la compatibilidad de programas|PcaSvc|Como no vamos a usar versiones antiguas de software en la máquina Windows, lo podemos desactivar. |
+|Servicio de compatibilidad con bluetooth|BluetoothUserService|Como la máquina Windows no va a utilizar ningún periférico, ni nada que requiera de conectividad bluetooth, lo podemos desactivar. |
+|Servicio de red de Xbox Live|XboxNetApiSvc|Como el usuario que maneja la máquina Windows, no va a utilizar la aplicación de Xbox, lo podemos desactivar. |
+|Partida guardada en Xbox Live|XblGameSave|Como el usuario que maneja la máquina Windows, no va a utilizar la aplicación de Xbox, lo podemos desactivar. |
+| | | |
+|Administración de autentación de Xbox Live|XblAuthManager|Como el usuario que maneja la máquina Windows, no va a utilizar la aplicación de Xbox, lo podemos desactivar. |
+| | | |
+|IPV6|Iphlpsvc|Como la máquina Windows utiliza direccionamiento IPV4, no requiere del uso de este servicio. Por lo tanto, lo podemos desactivar. |
+|Escritorio Remoto|RemoteAccess|Como la máquina Windows va a ser utilizada por usuarios, en principio no van a necesitar que nadie acceda a su equipo o viceversa. A no ser que un administrador desee hacerlo por motivos técnicos. Por el momento, lo podemos desactivar. |
